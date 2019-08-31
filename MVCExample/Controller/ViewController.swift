@@ -47,14 +47,6 @@ class ViewController: UIViewController {
         
         print(baslikArray)
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toDetailVC"{
-            if let destinationVC = segue.destination as? DetailViewController{
-                destinationVC.desc = desc
-            }
-        }
-    }
 
 
 }
@@ -74,8 +66,11 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        desc = self.items[indexPath.row].icerik!
-        self.performSegue(withIdentifier: "toDetailVC", sender: nil)
+        let model = self.items[indexPath.row]
+        let VC = DetayViewController(with: model)
+        
+        self.navigationController?.pushViewController(VC, animated: true)
+        
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
