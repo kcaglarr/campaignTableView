@@ -14,6 +14,7 @@
 		5B0F00E1231A47350030977F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B0F00DF231A47350030977F /* LaunchScreen.storyboard */; };
 		5B0F00EA231A49D00030977F /* CampaignModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0F00E9231A49D00030977F /* CampaignModel.swift */; };
 		5B0F00EC231A5F760030977F /* CampaignTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0F00EB231A5F760030977F /* CampaignTableViewCell.swift */; };
+		5B2DB2E9231A83C700BF776C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2DB2E8231A83C700BF776C /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		5B0F00E2231A47350030977F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B0F00E9231A49D00030977F /* CampaignModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignModel.swift; sourceTree = "<group>"; };
 		5B0F00EB231A5F760030977F /* CampaignTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignTableViewCell.swift; sourceTree = "<group>"; };
+		5B2DB2E8231A83C700BF776C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,9 +60,9 @@
 		5B0F00D5231A47340030977F /* MVCExample */ = {
 			isa = PBXGroup;
 			children = (
+				5B2DB2EA231A83D500BF776C /* Controller */,
 				5B0F00E8231A498F0030977F /* Model */,
 				5B0F00D6231A47340030977F /* AppDelegate.swift */,
-				5B0F00D8231A47340030977F /* ViewController.swift */,
 				5B0F00DA231A47340030977F /* Main.storyboard */,
 				5B0F00DD231A47350030977F /* Assets.xcassets */,
 				5B0F00DF231A47350030977F /* LaunchScreen.storyboard */,
@@ -76,6 +78,15 @@
 				5B0F00EB231A5F760030977F /* CampaignTableViewCell.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		5B2DB2EA231A83D500BF776C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B0F00D8231A47340030977F /* ViewController.swift */,
+				5B2DB2E8231A83C700BF776C /* DetailViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +162,7 @@
 			files = (
 				5B0F00D9231A47340030977F /* ViewController.swift in Sources */,
 				5B0F00EC231A5F760030977F /* CampaignTableViewCell.swift in Sources */,
+				5B2DB2E9231A83C700BF776C /* DetailViewController.swift in Sources */,
 				5B0F00EA231A49D00030977F /* CampaignModel.swift in Sources */,
 				5B0F00D7231A47340030977F /* AppDelegate.swift in Sources */,
 			);

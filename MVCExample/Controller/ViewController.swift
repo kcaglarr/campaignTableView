@@ -14,6 +14,8 @@ let url = URL(string: myUrl)
 let myData = try? Data(contentsOf: url!)
 let jsonDecoder = JSONDecoder()
 
+var desc: String = ""
+
 class ViewController: UIViewController {
     
     var items = [Campaign]()
@@ -45,6 +47,14 @@ class ViewController: UIViewController {
         
         print(baslikArray)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDetailVC"{
+            if let destinationVC = segue.destination as? DetailViewController{
+                destinationVC.desc = desc
+            }
+        }
+    }
 
 
 }
@@ -61,6 +71,11 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         cell.configure(with: model)
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        desc = self.items[indexPath.row].icerik!
+        self.performSegue(withIdentifier: "toDetailVC", sender: nil)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
